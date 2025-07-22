@@ -1,82 +1,88 @@
-# 軽量マルチエージェントフレームワーク（抽象化版）
+# Lightweight Multi-Agent Framework (Abstracted Version)
 
 ---
 
-## 概要
 
-MADは、Pythonで実装された軽量かつ抽象化されたマルチエージェントフレームワークです。  
-非同期処理（asyncio）に対応し、シンプルなメモリ機構を備えたLLM（大規模言語モデル）連携のエージェントを容易に作成・運用できます。
+## Overview
 
-本リポジトリは学習やプロトタイプ開発に最適化されています。
+**MAD** is a lightweight and abstracted multi-agent framework implemented in Python.  
+It supports asynchronous processing via `asyncio` and allows for easy creation and management of agents integrated with LLMs (Large Language Models) through a simple memory mechanism.
+
+This repository is optimized for learning purposes and rapid prototyping.
+
+---
+
+
+## Key Features
+
+- Asynchronous communication for message exchange between agents  
+- Simple memory module for managing conversation history  
+- Abstract base class for designing LLM integration interfaces  
+- DummyLLM for testing with simple, mock responses  
+- Configuration file for managing agent roles, names, and number of dialogue turns  
 
 ---
 
-## 主な特徴
-
-- 非同期通信によるエージェント間のメッセージ交換  
-- シンプルなメモリモジュールによる会話履歴管理  
-- 抽象基底クラスでのLLM連携インターフェース設計  
-- DummyLLMによるテスト用の簡易応答モデル  
-- 設定ファイルによるエージェントの役割・名前・対話回数の管理  
-
----
 
 ## ディレクトリ構成
 
 lightmad/
 
-├── agents/                  # エージェント本体
+├── agents/                  # Core agent implementations
 
-│   ├── base_agent.py        # エージェント基底クラス
+│   ├── base_agent.py        # Abstract base class for agents
 
-│   └── simple_agent.py      # シンプル実装例
+│   └── simple_agent.py      # Simple example implementation
 
-├── llm/                    # LLMインターフェース・実装
+├── llm/                     # LLM interface and implementations
 
-│   ├── base_llm.py          # LLM基底クラス
+│   ├── base_llm.py          # Abstract base class for LLMs
 
-│   └── dummy_llm.py         # テスト用ダミーLLM
+│   └── dummy_llm.py         # Dummy LLM for testing purposes
 
-├── memory/                 # メモリ管理モジュール
+├── memory/                  # Memory management module
 
 │   └── memory_module.py
 
-├── communication.py        # 会話ロジック
+├── communication.py         # Dialogue logic between agents
 
-├── config.py               # エージェント設定
+├── config.py                # Agent configuration settings
 
-├── main.py                 # 実行エントリーポイント
+├── main.py                  # Entry point for execution
 
 ├── LICENSE
 
 └── pyproject.toml
 
-
 ---
 
-## 使い方
 
-1. リポジトリをクローンまたはダウンロード  
-2. Python 3.8以上を用意  
-3. `main.py`を実行すると、サンプルの2エージェント対話が開始されます
+## Usage
+
+1. Clone or download the repository  
+2. Prepare Python 3.8 or higher  
+3. Run `main.py` to start a sample conversation between two agents:
 
 ```bash
 python lightmad/main.py
 ```
 
-### カスタマイズ方法
-config.pyのエージェント名・役割・対話ターン数を変更可能
 
-新たなLLM実装はllm/base_llm.pyを継承して作成
+### Customization
 
-エージェントのロジック拡張はagents/base_agent.pyやagents/simple_agent.pyを編集
+- You can modify agent names, roles, and number of dialogue turns in `config.py`.  
+- To create a new LLM implementation, extend the class in `llm/base_llm.py`.  
+- To extend agent logic, edit `agents/base_agent.py` or `agents/simple_agent.py`.
 
-### ライセンス
-MIT License
-詳細はLICENSEファイルを参照してください。
 
-### 注意事項
-本フレームワークは学習・プロトタイピング用途を想定しています。
-商用利用や大規模システム構築には十分な検証・改良が必要です。
+### License
 
-ご質問やご提案はIssueやPull Requestでお気軽にお寄せください。
+MIT License  
+Please refer to the LICENSE file for details.
+
+### Notice
+
+This framework is intended for educational and prototyping purposes.  
+Thorough validation and improvements are required for commercial use or large-scale system deployment.
+
+If you have any questions or suggestions, feel free to open an Issue or Pull Request.
