@@ -1,0 +1,13 @@
+
+[project]
+name = "lightmad"
+version = "0.3.0"
+description = "Minimal lightweight Multi-Agent LLM Framework with async and simple memory"
+authors = [{ name = "youimage" }]
+readme = "README.md"
+license = { text = "MIT" }
+dependencies = ["openai"]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
