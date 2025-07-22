@@ -24,31 +24,30 @@ MADは、Pythonで実装された軽量かつ抽象化されたマルチエー�
 ## ディレクトリ構成
 
 lightmad/
-│
-├── agents/ # エージェント本体
-│　 │
-│　 ├── base_agent.py # エージェント基底クラス
-│   │ 
-│   └── simple_agent.py# シンプル実装例
-│
-├── llm/ # LLMインターフェース・実装
-│   │
-│   ├── base_llm.py # LLM基底クラス
-│   │
-│   └── dummy_llm.py # テスト用ダミーLLM
-│
-├── memory/ # メモリ管理モジュール
-│   │
+├── agents/                  # エージェント本体
+
+│   ├── base_agent.py        # エージェント基底クラス
+
+│   └── simple_agent.py      # シンプル実装例
+
+├── llm/                    # LLMインターフェース・実装
+
+│   ├── base_llm.py          # LLM基底クラス
+
+│   └── dummy_llm.py         # テスト用ダミーLLM
+
+├── memory/                 # メモリ管理モジュール
+
 │   └── memory_module.py
-│
-├── communication.py # 会話ロジック
-│
-├── config.py # エージェント設定
-│
-├── main.py # 実行エントリーポイント
-│
+
+├── communication.py        # 会話ロジック
+
+├── config.py               # エージェント設定
+
+├── main.py                 # 実行エントリーポイント
+
 ├── LICENSE
-│
+
 └── pyproject.toml
 
 
