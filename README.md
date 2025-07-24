@@ -24,7 +24,7 @@ This repository is optimized for learning purposes and rapid prototyping.
 ---
 
 
-## ディレクトリ構成
+## Dir
 
 lightmad/
 
@@ -84,5 +84,3 @@ Please refer to the LICENSE file for details.
 
 This framework is intended for educational and prototyping purposes.  
 Thorough validation and improvements are required for commercial use or large-scale system deployment.
-
-If you have any questions or suggestions, feel free to open an Issue or Pull Request.
