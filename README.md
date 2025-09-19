@@ -21,11 +21,10 @@ This repository is optimized for learning purposes and rapid prototyping.
 - DummyLLM for testing with simple, mock responses  
 - Configuration file for managing agent roles, names, and number of dialogue turns  
 
----
 
+## Project Structure
 
-## Dir
-
+```
 lightmad/
 ├── agents/                  # Core agent implementations
 │   ├── base_agent.py        # Abstract base class for agents
@@ -40,9 +39,7 @@ lightmad/
 ├── main.py                  # Entry point for execution
 ├── LICENSE                  # License file
 └── pyproject.toml           # Python project configuration
-
-
----
+```
 
 
 ## Usage
