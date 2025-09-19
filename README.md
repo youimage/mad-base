@@ -27,32 +27,20 @@ This repository is optimized for learning purposes and rapid prototyping.
 ## Dir
 
 lightmad/
-
 ├── agents/                  # Core agent implementations
-
 │   ├── base_agent.py        # Abstract base class for agents
-
 │   └── simple_agent.py      # Simple example implementation
-
 ├── llm/                     # LLM interface and implementations
-
 │   ├── base_llm.py          # Abstract base class for LLMs
-
 │   └── dummy_llm.py         # Dummy LLM for testing purposes
-
 ├── memory/                  # Memory management module
-
 │   └── memory_module.py
-
 ├── communication.py         # Dialogue logic between agents
-
 ├── config.py                # Agent configuration settings
-
 ├── main.py                  # Entry point for execution
+├── LICENSE                  # License file
+└── pyproject.toml           # Python project configuration
 
-├── LICENSE
-
-└── pyproject.toml
 
 ---
 
